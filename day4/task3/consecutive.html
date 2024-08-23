@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="input__" type="text" name="input">
+
+    <button onclick="handle()">Click</button>
+
+    <span id="output"></span>
+
+    <script>
+
+        const input = document.getElementById('input__');
+        const output = document.getElementById('output');
+
+        function handle() {
+
+            const str = input.value;
+
+            if (!str.length) {
+                output.innerText = 'invalidInput'
+                return;
+            }
+
+            let res = [];
+            let tmp = str[0];
+
+            for (let i = 1; i < str.length; i++) {
+            
+                let b = Number.parseInt(str[i]);
+                let a = Number.parseInt(tmp[tmp.length - 1]);
+            
+                if (Math.abs(a - b) === 1 && a < b) {
+                    tmp += str[i];
+                }
+                else {
+                    res.push(tmp)
+                    tmp = str[i];
+                }
+            }
+            
+            if (tmp.length)
+                res.push(tmp);
+            
+                output.innerText = res;
+        }
+    </script>
+</body>
+
+</html>

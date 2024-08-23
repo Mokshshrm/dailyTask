@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>News Headline</title>
+</head>
+
+<body style="box-sizing: border-box;">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #scroll-container {
+            overflow: hidden;
+        }
+
+        #scroll-text {
+            animation: my-animation 10s linear infinite;
+        }
+
+        @keyframes my-animation {
+            from {
+                transform: translateX(100%);
+            }
+            
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <div style="display: flex;flex-direction: column-reverse; background-image: url('./banner.jpg'); height: 400px;">
+        <div id="scroll-container"
+            style=" width: 100%; background-color: #fff; height: 80px; border: 5px solid black; justify-self: baseline; display: flex;justify-content: center;align-items: center;">
+            <div id="scroll-text" style="font-size: 2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Saepe, eius Lorem ipsum dolor sit, amet consectetur adipisicing elit</div>
+        </div>
+        <div style="font-size: 2rem;margin: 0px 50px;width: calc(100% - 2*50px);background-color: red; height: 80px;display:
+            flex;justify-content: start ; color: white;">
+
+            <div
+                style="float: left; display: flex; justify-content: center; align-items: center; height: 100%; width: 180px; border: 7px solid grey;">
+                <span style="text-wrap: balance; text-align: center; width: 100% ;">TOMATO NEWS</span>
+            </div>
+
+            <div id="scroll-container"
+                style="float: left; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;">
+                <div id="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, eius!</div>
+            </div>
+
+            <div
+                style="float: left; display: flex; justify-content: center; align-items: center; height: 100%; width: 150px; padding: 10px; border: 7px solid grey;color: black;">
+                <span style="text-wrap: balance; text-align: center; width: 100%;">LIVE</span>
+            </div>
+        </div>
+        <div style="margin-left: 150px;"><span style="font-size: 2.5rem; background-color: grey">BREAKING NEWS</span>
+        </div>
+    </div>
+</body>
+
+</html>

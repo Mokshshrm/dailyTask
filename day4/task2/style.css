@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(255, 195, 255); */
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100vw;
+}
+
+.header-section {
+    background-color: black;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 1.25rem;
+    /* padding: 1px 7px; */
+    color: white;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header>a {
+    float: left;
+}
+
+.header>a>img {
+    width: 70px;
+    border-radius: 100%;
+}
+
+
+.nav-bar {
+    float: right;
+    margin-left: 20px;
+}
+
+.nav-bar-ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links {
+    margin: 10px 14px;
+}
+
+.nav-links>a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.first-section {
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    background-image: url('./banner.jpg');
+    background-size: cover;
+}
+
+.first-section-column1 {
+    margin: 0px 30px;
+    margin-top: 100px;
+}
+
+.banner-heading {
+    font-size: 2rem;
+    width: 200px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.banner-content {
+    width: 300px;
+    text-wrap: stable;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.first-section-column2 {
+    display: none;
+    margin: 0px 30px;
+    margin-top: 100px;
+}
+
+.first-section-column2>img {
+    height: 800px;
+    width: 100%;
+    padding: 0px;
+    box-shadow: inset -10px -10px 10px 20px white;
+}
+
+@media screen and (min-width: 768px) {
+
+    .header {
+        margin: 0px 120px;
+        font-size: 2rem;
+    }
+
+    .header>a>img {
+        width: 100px;
+        border-radius: 90%;
+    }
+
+    .first-section {
+        grid-template-columns: repeat(2, auto);
+        background-image: none;
+    }
+
+    .first-section-column1 {
+        margin-top: 400px;
+    }
+
+    .banner-heading {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+    .banner-content {
+        font-size: 1.5rem;
+        width: 700px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        letter-spacing: 3px;
+        margin-top: 30px;
+    }
+
+    .first-section-column2 {
+        display: block;
+    }
+}

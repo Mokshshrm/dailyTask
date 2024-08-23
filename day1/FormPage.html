@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    .margin_bottom {
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <form>
+        <label for=" username">Username: </label>
+        <input type="text" name="username" class="margin_bottom">
+        <br />
+        <label for="password">Password : </label>
+        <input type="password" class="margin_bottom">
+        <br />
+        <label>Gender : </label>
+        <input type="radio" name="Gender" value="Male">Male</input>
+        <input type="radio" name="Gender" value="Female" class="margin_bottom">Female</input>
+        <br />
+        <label for="">DropdownMenu: </label>
+        <select class="margin_bottom">
+            <option value="null"></option>
+            <option value="married">Married</option>
+            <option value="unmarried">Unmarried</option>
+        </select>
+        <br />
+        <input type="button" onclick="(e)=>{e.preventDefault()}" value="Submit">
+    </form>
+</body>
+
+</html>

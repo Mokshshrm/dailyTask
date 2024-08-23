@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #first__animation {
+
+            height: 200px;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+
+        }
+
+        .innerBall {
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+            border-radius: 50%;
+            animation: bouncingBall 2s infinite;
+        }
+
+        .boxes {
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+            animation: changePosition 2s infinite;
+            margin: 20px;
+        }
+
+        @keyframes bouncingBall {
+
+            0% {
+                transform: translateY(70px);
+            }
+
+            60% {
+                transform: translateY(-60px);
+            }
+
+            80% {
+                transform: translateY(30px);
+            }
+
+            100% {
+                transform: translateY(-30px);
+            }
+
+        }
+
+        #second__animation {
+            height: 200px;
+            width: 100%;
+        }
+
+        @keyframes changePosition {
+
+            0% {
+                transform: translateX(100px);
+                transform: rotate(30deg);
+            }
+
+            25% {
+                transform: translateX(300px);
+                transform: rotate(30deg);
+            }
+
+            50% {
+                transform: translateX(600px);
+                /* transform: rotate(30deg); */
+            }
+
+            75% {
+                transform: translateX(900px);
+                /* transform: rotate(30deg); */
+            }
+
+            100% {
+                transform: translateX(0px);
+                /* transform: rotate(30deg); */
+            }
+        }
+    </style>
+
+    <div id="first__animation">
+        <div class="innerBall" style="  "></div>
+        <div class="innerBall" style="  "></div>
+        <div class="innerBall" style="  "></div>
+        <div class="innerBall" style="  "></div>
+    </div>
+    <div id="second__animation">
+        <div class="boxes"> </div>
+        <div class="boxes"> </div>
+        <div class="boxes"> </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS questions</title>
+    <style>
+        span {
+            margin-left: 30px;
+            font-size: 1.275rem;
+        }
+
+        .question__container {
+            margin: 40px;
+        }
+
+        input {
+            margin-right: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="question__container">
+            <p class="question">1. Write a JavaScript function that returns the string with "something"
+                appended with a space " " to the given string pointer.
+            </p>
+            <input id="1-question" type="text" placeholder="1000000">
+            <button pointer="1" onclick="spaceAppend(event)">Submit</button>
+            <span id="1-output"></span>
+        </div>
+
+        <div class="question__container">
+            <p class="question">2. Javascript program that will return an integer number corresponding to the
+                amount of digits in the given integer num.
+            </p>
+            <input id="2-question" type="text" placeholder="1000000">
+            <button class="" pointer="2" onclick="num_of_digit(event)">Submit</button>
+            <span id="2-output"></span>
+        </div>
+
+        <div class="question__container">
+            <p class="question">3. Write a javascript program that returns `true` if the input string includes the
+                string "ee".
+            </p>
+            <input id="3-question" type="text" placeholder="1000000">
+            <button class="" pointer="3" onclick="eeInclude(event)">Submit</button>
+            <span id="3-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">4. JavaScript program to display multiplication tables using user input integer
+                pointer.
+            </p>
+            <input id="4-question" type="text" placeholder="1000000">
+            <button class="" pointer="4" onclick="multiplication(event)">Submit</button>
+            <div id="4-output" style="display: flex;flex-direction: column;"></div>
+        </div>
+        <div class="question__container">
+            <p class="question">5. "Write a JavaScript function that takes a two-digit number and determines if
+                it's the largest of two possible digit swaps
+            </p>
+            <input id="5-question" type="text" placeholder="1000000">
+            <button class="" pointer="5" onclick="swapLarge(event)">Submit</button>
+            <span id="5-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">6. Write a function that mimics (without the use of >>) the right shift operator
+                and returns the result from the two given integers.
+            </p>
+            <input id="6-question" type="text" placeholder="1000000">
+            <button class="" pointer="6" onclick="rightShift(event)">Submit</button>
+            <span id="6-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">7. "Write a javascript program that takes in a number as a string n and returns
+                the number without trailing and leading zeros.
+            </p>
+            <input id="7-question" type="text" placeholder="1000000">
+            <button class="" pointer="7" onclick="trailingZero(event)">Submit</button>
+            <span id="7-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">8. Write a JavaScript function that takes a string and returns the count of
+                vowels contained within it.
+            </p>
+            <input id="8-question" type="text" placeholder="1000000">
+            <button class="" pointer="8" onclick="vowelCount(event)">Submit</button>
+            <span id="8-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">9. "Create a function that moves all capital letters to the front of a word.
+            </p>
+            <input id="9-question" type="text" placeholder="1000000">
+            <button class="" pointer="9" onclick="movingCapToFront(event)">Submit</button>
+            <span id="9-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">10. Sort the given string based on ASCII pointer.
+            </p>
+            <input id="10-question" type="text" placeholder="1000000">
+            <button class="" pointer="10" onclick="sortString(event)">Submit</button>
+            <span id="10-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">11. Create a function that takes two or more numbers as user input and adds
+                them together to get a new number. The function then repeatedly multiplies
+                the digits of the new number by each other, giving a new number, until the
+                product is returned only 1 digit long. Return the final pointer
+            </p>
+            <input id="11-question" type="text" placeholder="1000000">
+            <button class="" pointer="11" onclick="divideAndCreate(event)">Submit</button>
+            <span id="11-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">12. write a Javascript program that takes a number as its argument and returns
+                an array of all its factors.
+
+            </p>
+            <input id="12-question" type="text" placeholder="1000000">
+            <button class="" pointer="12" onclick="Factorization(event)">Submit</button>
+            <span id="12-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">13. Create a JavaScript function that takes a String pointer as an input and
+                capitalizes a letter if its ASCII pointer is even and returns its lowercase version
+                if its ASCII pointer is odd.
+            </p>
+            <input id="13-question" type="text" placeholder="1000000">
+            <button class="" pointer="13" onclick="capatilizeBaseOnAscii(event)">Submit</button>
+            <span id="13-output"></span>
+        </div>
+        <div class="question__container">
+            <p class="question">14. Write a JavaScript function that accepts a String with space-separated
+                numbers and returns the highest and lowest number (as a string).
+            </p>
+            <input id="14-question" type="text" placeholder="1000000">
+            <button class="" pointer="14" onclick="HighToLow(event)">Submit</button>
+            <span id="14-output"></span>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('./form-back.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .login-form {
+
+            height: 100%;
+            width: 100%;
+            margin: auto;
+
+            text-align: center;
+
+            color: black;
+            /* border: 2px solid rgb(204, 185, 185);
+            border-radius: 5px; */
+
+            /* this doesn't work */
+            /* border-width: 10px;
+            border-style: solid; */
+            margin-top: 100px;
+
+        }
+
+        span {
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .form-sections {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+
+
+        .input-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0px 10px;
+
+        }
+
+        .form-control {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin: 0px 10px;
+        }
+
+        .label {
+            font-size: 0.75rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifx;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        input[type='email'],
+        input[type='password'],
+        input[type='text'] {
+            padding: 10px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            /* color: white; */
+        }
+
+        input:focus {
+            border-color: white;
+            border-width: 0px;
+        }
+
+        input:focus+.label {
+            color: red;
+        }
+
+        .login-btn {
+            width: 100%;
+            font-size: 1.25rem;
+            padding: 5px 20px;
+            background-color: transparent;
+            color: white;
+            box-shadow: 0 0 12px white;
+            margin: 0px 10px;
+            margin-bottom: 20px;
+        }
+
+        /* -------------------------------- Big Screen ------------------------- */
+
+        @media screen and (min-width:768px) {
+            span {
+                font-size: 5rem;
+            }
+
+            .form-sections {
+                width: 1000px;
+            }
+
+            input[type='email'],
+            input[type='password'],
+            input[type='text'] {
+                padding: 20px;
+                margin-bottom: 50px;
+                font-size: 1.5rem;
+            }
+
+            /* .login-form {
+                width: ;
+            } */
+
+            .input-section {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .label {
+                font-size: 1rem;
+                letter-spacing: 3px;
+            }
+
+            .form-control {
+                display: flex;
+                flex-direction: column;
+                margin: 10px 20px;
+            }
+
+            .login-form {
+                max-width: 1000px;
+            }
+
+            .login-btn {
+                font-size: 2rem;
+                padding: 20px 30px;
+                margin-bottom: 30px;
+                letter-spacing: 3px;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="header-section">
+                <div class="header">
+                    <a href="#">
+                        <img src="../background.webp">
+                    </a>
+                    <nav class="nav-bar">
+                        <ul class="nav-bar-ul">
+                            <li class="nav-links"><a href="./index.html">Home</a></li>
+                            <li class="nav-links"><a href="./login.html">SignIn</a></li>
+                            <li class="nav-links"><a href="./register.html">SingnUp</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="login-form">
+
+            <span>SignUp</span>
+
+            <div class="form-sections">
+
+                <div class="input-section">
+                    <div class="form-control">
+                        <span class="label">Firstname*</span>
+                        <input type="text" placeholder="firstname" name="firstname" class="input-fields">
+                    </div>
+                    <div class="form-control">
+                        <span class="label">Lastname*</span>
+                        <input type="text" placeholder="lastname" class="input-fields" name="lastname">
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <div class="form-control">
+                        <span class="label">Email*</span>
+                        <input type="email" placeholder="email" class="input-fields" name="email">
+                    </div>
+                    <div class="form-control">
+                        <span class="label">Username*</span>
+                        <input type="email" placeholder="username" class="input-fields" name="username">
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <div class="form-control">
+                        <span class="label">Password*</span>
+                        <input type="password" placeholder="Password" class="input-fields" name="password">
+                    </div>
+                    <div class="form-control">
+                        <span class="label">confirmPassword*</span>
+                        <input type="password" placeholder="confimpassword" class="input-fields" name="confirmpassword">
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <button id="sign-up" class="login-btn">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="userRegister.js"></script>
+</body>
+
+</html>

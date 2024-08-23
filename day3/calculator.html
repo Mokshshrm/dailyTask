@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        .calculator__section {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(235, 223, 223);
+            width: 800px;
+            height: auto;
+        }
+
+        .cal__display {
+            height: 100px;
+            background-color: rgba(92, 40, 40, 0.552);
+            padding: 10px;
+        }
+
+        #operationScreen {
+            width: 100%;
+            height: 100%;
+            font-size: 2.5rem;
+            padding: 5px 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .cal__btn__section {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            height: auto;
+        }
+
+        .cell {
+            background-color: rgb(126, 120, 126);
+            display: grid;
+            width: auto;
+            margin: 20px;
+            height: 100px;
+            place-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator__section">
+        <div class="container">
+            <div class="cal__display">
+                <input id="operationScreen" type="text">
+            </div>
+            <div class="cal__btn__section">
+                <div class="cell" onclick="cal(event)">1</div>
+                <div class="cell" onclick="cal(event)">2</div>
+                <div class="cell" onclick="cal(event)">3</div>
+                <div class="cell" onclick="cal(event)">+</div>
+                <div class="cell" onclick="cal(event)">4</div>
+                <div class="cell" onclick="cal(event)">5</div>
+                <div class="cell" onclick="cal(event)">6</div>
+                <div class="cell" onclick="cal(event)">-</div>
+                <div class="cell" onclick="cal(event)">7</div>
+                <div class="cell" onclick="cal(event)">8</div>
+                <div class="cell" onclick="cal(event)">9</div>
+                <div class="cell" onclick="cal(event)">*</div>
+                <div class="cell" onclick="cal(event)">0</div>
+                <div class="cell" onclick="cal(event)">/</div>
+                <div class="cell" onclick="cal(event)">%</div>
+                <div class="cell" onclick="performe()">=</div>
+                <div class="cell" onclick="cal(event)">(</div>
+                <div class="cell" onclick="cal(event)">)</div>
+                <div class="cell" onclick="backSpace()">B</div>
+                <div class="cell" onclick="clearDisplay()">C</div>
+            </div>
+
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

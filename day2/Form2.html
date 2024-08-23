@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form__container {
+            width: 800px;
+            height: auto;
+            position: absolute;
+            background-color: rgb(55, 106, 117);
+            border: 30px solid rgb(55, 106, 117);
+        }
+
+        .form__ {
+            width: 100%;
+            height: auto;
+            position: relative;
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        .form__header {
+            height: 30px;
+            background-color: rgba(179, 179, 179, 0.512);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header__text {
+            font-size: 26px;
+            font-weight: 300;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans- serif;
+            color: rgb(122, 115, 115);
+        }
+
+        .input__sections {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin: 10px;
+            margin-bottom: 20px;
+            max-width: calc(800 - 2*10px);
+        }
+
+        .input__field__container {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+        }
+
+        .input__label {
+            font-size: 0.75rem;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(72, 193, 153);
+            margin-bottom: 10px;
+        }
+
+        input[type='text'] {
+            font-size: 1rem;
+            padding: 15px;
+
+        }
+
+        input:focus {
+            border-color: white;
+            /* border-radius: ; */
+        }
+
+        @media screen and(min-width:768px) {
+            .input__sections {
+                flex-direction: column !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div>
+        <div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature">
+            <div dir="ltr">
+                <div style="font-family:Arial;font-size:14px;color:rgb(100,100,100)"></div>
+                <div style="color:rgb(136,136,136);padding:5px 0px">
+                    <table style="border:none;border-collapse:collapse">
+                        <tbody>
+                            <tr style="height:62.7284pt">
+                                <td style="vertical-align:top;padding:5pt 8pt;overflow:hidden">
+                                    <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><img
+                                            width="96" height="83"
+                                            src="https://ci3.googleusercontent.com/mail-sig/AIorK4zl2Lxe_nh1zsURS-CaZT3gNUtCvEujm4hrYFIaOv6hiDuUSwa9GoY-OyfVWwxM4zJ_AWlq9nA"
+                                            class="CToWUd" data-bit="iit"></p>
+                                </td>
+                                <td
+                                    style="border-right:1.5pt solid rgb(153,153,153);vertical-align:top;padding:5pt;overflow:hidden">
+                                    <br></td>
+                                <td
+                                    style="border-left:1.5pt solid rgb(153,153,153);vertical-align:top;padding:0pt 8pt;overflow:hidden">
+                                    <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span
+                                            style="font-size:12pt;font-family:Tahoma,sans-serif;color:rgb(100,100,100);background-color:transparent;font-weight:700;vertical-align:baseline;white-space:pre-wrap">Jenish
+                                            Gangani</span></p>
+                                    <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span
+                                            style="font-size:12pt;font-family:Tahoma,sans-serif;color:rgb(100,100,100);background-color:transparent;vertical-align:baseline;white-space:pre-wrap">Salesforce
+                                            Developer, MV Clouds Private Limited</span></p>
+                                    <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span
+                                            style="font-size:12pt;font-family:Tahoma,sans-serif;color:rgb(141,141,141);background-color:transparent;vertical-align:baseline;white-space:pre-wrap">Email:</span><span
+                                            style="font-size:12pt;font-family:Tahoma,sans-serif;color:rgb(100,100,100);background-color:transparent;vertical-align:baseline;white-space:pre-wrap">
+                                            <a href="mailto:jenish.g@mvclouds.com" style="color:rgb(17,85,204)"
+                                                target="_blank">jenish.g@mvclouds.com</a></span></p>
+                                    <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span
+                                            style="font-size:12pt;font-family:Tahoma,sans-serif;color:rgb(141,141,141);background-color:transparent;vertical-align:baseline;white-space:pre-wrap">Website:
+                                            <a href="http://www.mvclouds.com/" style="color:rgb(17,85,204)"
+                                                target="_blank"
+                                                data-saferedirecturl="https://www.google.com/url?q=http://www.mvclouds.com/&amp;source=gmail&amp;ust=1724426645275000&amp;usg=AOvVaw1M2qxfefV44gDkuuWV3v0d">www.mvclouds.com</a></span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><span style="text-align:initial">
+                        <font color="#1155cc" face="trebuchet ms, sans-serif"><u></u></font>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="form__container">
+
+        <form class="form__">
+            <div class="form__header">
+                <span class="header__text">Create
+                    Account</span>
+            </div>
+
+            <div class="input__container">
+
+                <!-- first section -->
+
+                <div class="input__sections">
+                    <div class="input__field__container">
+                        <span class="input__label">First name*</span>
+                        <input type="text" placeholder="Enter Your Firstname">
+                    </div>
+                    <div class="input__field__container">
+                        <span class="input__label">Last name*</span>
+                        <input type="text" placeholder="Enter Your Lastname">
+                    </div>
+                </div>
+
+                <!-- second section -->
+                <div class="input__sections">
+                    <div style="display: flex; flex-direction: column; width: 100%; margin: 0px 15px;">
+                        <span class="input__label">Email*</span>
+                        <input type="text" placeholder="Enter Email">
+                    </div>
+                </div>
+
+                <!-- third section -->
+
+                <div class="input__sections">
+                    <div class="input__field__container">
+                        <span class="input__label">Password*</span>
+                        <input type="text" placeholder="Password">
+                    </div>
+                    <div class="input__field__container">
+                        <span class="input__label">Confirm
+                            Password*</span>
+                        <input type="text" placeholder="Confirm Password">
+                    </div>
+                </div>
+
+                <!-- fourth section -->
+                <div class="input__sections">
+                    <div class="input__field__container">
+                        <span class="input__label">First
+                            name*</span>
+                        <div style="display: flex; flex-direction: row; ">
+                            <input type="radio" name="gender" value="male">Male</input>
+                            <input type="radio" name="gender" value="female">Female</input>
+                        </div>
+                    </div>
+                    <div class="input__field__container">
+                        <span class="input__label">First
+                            name*</span>
+                        <div style="display: flex; flex-direction: row; ">
+                            <input type="radio" name="hobbies" value="Music">Music</input>
+                            <input type="radio" name="hobbies" value="Sport">Sport</input>
+                            <input type="radio" name="hobbies" value="Travel">Travel</input>
+                            <input type="radio" name="hobbies" value="Movies">Movies</input>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fifth section -->
+                <div class="input__sections">
+                    <div class="input__field__container">
+                        <span class="input__label">Source Of Income</span>
+                        <select style="padding: 15px; font-size: 1rem;">
+                            <option>Hellow</option>
+                            <option>World</option>
+                        </select>
+                    </div>
+                    <div class="input__field__container">
+                        <span class="input__label">Income</span>
+                        <div
+                            style="display: flex; flex-direction:row;justify-content: center; align-items: center; margin-top: 10px;margin-bottom: 10px;">
+                            <input type="range" style="width: 90%;" min="1" max="10000000">
+                            <div style=" width:20px; height: auto; font-size: 10px; background-color: rgb(72, 193, 153);
+                                padding: 5px;">
+                                <span style="margin: auto;font-weight: 400;color: white;">20k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sixth Section  -->
+                <div class="input__sections">
+                    <div class="input__field__container">
+                        <span class="input__label">Upload Profile
+                            Picture*</span>
+                        <input type="file">
+                    </div>
+                    <div class="input__field__container">
+                        <span class="input__label">Age</span>
+                        <input type="text" placeholder="Age">
+                    </div>
+                </div>
+
+                <!-- seventh Section -->
+                <div class="input__sections">
+                    <div style="display: flex; flex-direction: column; width: 100%;margin: 0px 15px;">
+                        <span class="input__label">Bio</span>
+                        <textarea
+                            style="width: 100%; height: 50px; max-width: calc(800px - 2*25px); min-width: calc(800px - 2*25px); min-height: 50px;">
+                    </textarea>
+                    </div>
+                </div>
+            </div>
+            <div
+                style="height: 30px; background-color: rgba(179, 179, 179, 0.512); display:flex; justify-content: flex-end; align-items: center; padding: 10px; ">
+                <button
+                    style="padding: 5px 10px; background-color:  rgb(72, 193, 153); border: 1px solid transparent; font-weight: bolder;color:white; ">Create
+                </button>
+            </div>
+        </form>
+
+        <!--  -->
+    </div>
+</body>
+
+</html
