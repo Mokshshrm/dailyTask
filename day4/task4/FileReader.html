@@ -8,29 +8,67 @@
 </head>
 
 <body>
-
-    <input id="file_id" type="file" name="file">
-    <button onclick="handle()">Submit</button>
-    <span id="output"></span>
-
+    <input type="file" name="input" id="input">
+    <div id="output"></div>
     <script>
 
-        const file = document.getElementById('file_id');
-        let text = ''
-        function handle() {
-            
-            let Reader = new FileReader();
-            Reader.readAsText(file.files[0]);
+        const input = document.getElementById('input')
+        const output = document.getElementById('output')
 
-            Reader.onload = function () {
-                text = Reader.result
+
+        input.addEventListener('change', (event) => {
+
+            const file = input.files[0];
+
+            let reader = new FileReader();
+            reader.readAsText(file);
+
+            output.innerHTML = ''
+
+            // abba
+
+            function handleFile(wordList) {
+
+                function RecurSiveFunction(word, i, mp) {
+
+                    if (i < 0)
+                        return [-1, -1];
+
+                    if (mp.get(word.charAt(i)) !== undefined)
+                        return [i, mp.get(word.charAt(i))];
+
+                    mp.set(word.charAt(i), i);
+                    return RecurSiveFunction(word, i - 1, mp);
+                }
+
+                if (!Array.isArray(wordList))
+                    return;
+
+                for (let word of wordList) {
+
+                    if (word.length == 0)
+                        continue;
+
+                    let res = RecurSiveFunction(word, word.length - 1, new Map());
+
+                    if (res[0] !== -1) {
+
+                        let outputText = `{ "${word[res[0]]}" : ${res} }`
+                        let ele = document.createElement('div')
+                        ele.innerText = outputText;
+                        output.appendChild(ele);
+
+                    }
+                }
             }
 
-            console.log(text)
-        }
 
+            reader.onload = function (event) {
+                let wordListAsText = reader.result;
+                handleFile(wordListAsText.split(/\s+/))
+            }
 
-
+        })
     </script>
 </body>
 
