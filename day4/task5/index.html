@@ -9,7 +9,110 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            scrollbar-track-color: #0bdc46;
+        }
+
+        .img-upload {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #img-btn {
+            width: 200px;
+            height: auto;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 20px 10px;
+            box-shadow: 0px 0px 10px #0bdc46;
+            outline: none;
+            border: 0px;
+        }
+
+        #img-container {
+            width: 100%;
+            height: auto;
+            padding: 0px 20px;
+            color: white;
+        }
+
+
+        .img-viewer {
+            width: 100%;
+            height: auto;
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .img-window {
+            width: 400px;
+            height: 250px;
+            box-shadow: 0px 0px 5px 4px white;
+            display: grid;
+            place-items: center;
+        }
+
+        .img-window>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img-content {
+            width: 100%;
+            /* height: 100%; */
+            margin: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: start;
+        }
+
+        .img-content>div {
+            width: 100%;
+            height: calc(250px - 2*10px - 2*2px - 20px);
+            /* max-height: 400px; */
+            overflow-y: scroll;
+            overflow-x: hidden;
+            overflow-wrap: break-word;
+            border: 1px solid white;
+        }
+
+        .img-content>div>p {
+            /* overflow-y: scroll; */
+            color: white;
+            letter-spacing: 1px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 10px;
+        }
+
+        .img-download-btn {
+            width: auto;
+            padding: 1px 3px;
+            height: 20px;
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: blue;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            box-shadow: 0px 0px;
+            color: white;
+
         }
     </style>
 </head>
@@ -17,9 +120,14 @@
 <body>
     <div class="container">
 
-    </div>
+        <div class="img-upload">
+            <input type="file" name="uploadfile" id="img-input" style="display: none;" />
+            <label id="img-btn" for="img-input">Upload CSV File</label>
+        </div>
 
-
+        <div id="img-container">
+        </div>
+        <script src="index.js"></script>
 </body>
 
 </html>

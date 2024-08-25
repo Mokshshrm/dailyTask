@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        #container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            grid-template-columns: auto;
+        }
+
+        #display {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 100px;
+        }
+
+        .cell {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-shadow: 0px 0px 10px blue;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        #showTime {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+        }
+
+        @media screen and (min-width: 768px) {
+            #display {
+                width: 700px;
+                height: 200px;
+            }
+
+            .cell {
+                font-size: 4rem;
+            }
+
+            #showTime {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="display">
+            <div class="cell" id="hourDisplay">
+            </div>
+            <div class="cell" id="minuteDisplay">
+            </div>
+            <div class="cell" id="secondDisplay">
+            </div>
+        </div>
+        <span id="showTime">Lunch Break In</span>
+    </div>
+
+    <script>
+
+        let hourDisplay = document.getElementById('hourDisplay');
+        let minuteDisplay = document.getElementById('minuteDisplay')
+        let secondDisplay = document.getElementById('secondDisplay')
+        let isOccupied = false;
+
+        const handle = (event) => {
+
+            if (isOccupied)
+                return;
+
+            function calculateTime(enteredDate) {
+
+                let totalSeconds = enteredDate - new Date();
+                let day = Number.parseInt(totalSeconds / (1000 * 60 * 60 * 24));
+                let hour = Number.parseInt((totalSeconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minute = Number.parseInt((totalSeconds % (1000 * 60 * 60)) / (1000 * 60));
+                let second = Number.parseInt((totalSeconds % (1000 * 60)) / 1000);
+
+                return {
+                    day: day,
+                    hour: hour,
+                    minute: minute,
+                    second: second,
+                }
+            }
+
+            let enteredDate = new Date();
+            let current = new Date();
+            enteredDate.setHours(21, 57, 0, 0);
+
+            if (current > enteredDate)
+                enteredDate.setDate(current.getDate() + 1);
+
+            isOccupied = true;
+            let timeInteval = setInterval(() => {
+                const remainngTime = calculateTime(enteredDate);
+                if (remainngTime.day <= 0 && remainngTime.minute <= 0 && remainngTime.hour <= 0 && remainngTime.second <= 0) {
+                    clearInterval(timeInteval);
+                    isOccupied = false;
+                }
+                else {
+                    hourDisplay.innerText = remainngTime.hour <= 9 ? "0" + (remainngTime.hour) : remainngTime.hour;
+                    minuteDisplay.innerText = remainngTime.minute <= 9 ? "0" + (remainngTime.minute) : remainngTime.minute;
+                    secondDisplay.innerText = remainngTime.second <= 9 ? "0" + (remainngTime.second) : remainngTime.second;
+                }
+            }, 1000);
+        };
+        document.addEventListener('DOMContentLoaded', handle(event));        
+    </script>
+</body>
+
+</html>

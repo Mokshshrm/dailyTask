@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="datetime-local" name="" id="input">
+    <button onclick="handle(event)">submit</button>
+    <span id="output"></span>
+    <script>
+
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        let isOccupied = false;
+
+        const handle = (event) => {
+
+
+            function calculateTime(enteredDate) {
+
+                let totalSeconds = enteredDate - new Date();
+                let day = Number.parseInt(totalSeconds / (1000 * 60 * 60 * 24));
+                let hour = Number.parseInt((totalSeconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minute = Number.parseInt((totalSeconds % (1000 * 60 * 60)) / (1000 * 60));
+                let second = Number.parseInt((totalSeconds % (1000 * 60)) / 1000);
+
+                return {
+                    day: day,
+                    hour: hour,
+                    minute: minute,
+                    second: second,
+                }
+            }
+            if (!isOccupied) {
+
+                let enteredDate = new Date(input.value);
+
+                isOccupied = true;
+
+                output.innerText = '';
+
+
+                let timeInteval = setInterval(() => {
+
+                    const remainngTime = calculateTime(enteredDate);
+
+                    if (remainngTime.day == 0 && remainngTime.minute == 0 && remainngTime.hour == 0 && remainngTime.second == 0) {
+                        clearInterval(timeInteval);
+                        isOccupied = false;
+                    }
+                    output.innerText = `Day : ${remainngTime.day}  Hour : ${remainngTime.hour}  Minute : ${remainngTime.minute}  Seconds : ${remainngTime.second}`
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+
+</html>
