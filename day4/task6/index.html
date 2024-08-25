@@ -39,11 +39,12 @@
 
                 let enteredDate = new Date(input.value);
 
-                isOccupied = true;
 
                 output.innerText = '';
+                if (enteredDate < new Date())
+                    return;
 
-
+                isOccupied = true;
                 let timeInteval = setInterval(() => {
 
                     const remainngTime = calculateTime(enteredDate);
