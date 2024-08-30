@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cart.css">
+</head>
+
+<body>
+    <div class="main-page" style="background-color: #e9edee;">
+        <div class="side-bar-container" id="side-bar-container">
+            <div class="side-bar-content">
+                <div class="side-bar-content-header">
+                    <img id="side-bar-profile" src="./assets/profile.png" alt="user-logo">
+                    <span>Hello, Sign in</span>
+                </div>
+                <div class="side-bar-content-items">
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Trending</span>
+                        <div class="side-bar-item-content">
+                            <span>Best Sellers</span>
+                            <span>New Release</span>
+                            <span>Movers and Shakers</span>
+                        </div>
+                    </div>
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Digital Content and Devices</span>
+                        <div class="side-bar-item-content">
+                            <span>Echo & Alexa</span>
+                            <span>Fire TV</span>
+                            <span>Kindle E-Readers & eBook</span>
+                            <span>Audible Audiobooks</span>
+                            <span>Amazon Prime Video</span>
+                            <span>Amazon Prime Music</span>
+                        </div>
+                    </div>
+                    <span class="side-bar-item-header">Shop by Category</span>
+                    <div class="side-bar-content-item">
+                        <div class="side-bar-item-content">
+                            <span>Mobile, Computers</span>
+                            <span>Tv,Appliances,Electronics</span>
+                            <span>Home, Kitchen, Pets</span>
+                            <span>Beauty, Health, Grocery</span>
+                            <span>Sports,Fitness,Bags,Luggage</span>
+                            <span>Toys,Baby Product, Kid's Fashion</span>
+                        </div>
+                    </div>
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Programs & Features</span>
+                        <div class="side-bar-item-content">
+                            <span>Best Sellers</span>
+                            <span>New Release</span>
+                            <span>Movers and Shakers</span>
+                        </div>
+                    </div>
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Help & Settings</span>
+                        <div class="side-bar-item-content">
+                            <span>Setting</span>
+                            <span>Help</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="side-bar-close-btn" class="side-bar-close-btn">
+                <div class="side-bar-btn-span"></div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header-container">
+                <div class="left-nav">
+                    <a href="#" class="">
+                        <div class="logo-img"></div>
+                        <span class="in-box">.in</span>
+                    </a>
+                    <a class="location-container">
+                        <div class="map-logo"></div>
+                        <div class="address-container">
+                            <div class="address" style="font-size: 0.85rem; letter-spacing: 0.5px;"> Delivering to
+                                Ahmedabad
+                                380001</div>
+                            <div class="address" style="font-weight: bolder;"> Update location</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fill-nav" id="fill-nav">
+                    <div class="search-menu-bar">All</div>
+                    <input type="text" class="search-bar" id="search-bar" placeholder="Search Amazon.in">
+                    <div class="search-icon"><img src="./assets/serarch.png"></div>
+                </div>
+                <div class="right-nav">
+                    <div class="right-nav-item flag-menu">
+                        <img src="./assets/flag.png" style="width:30px;margin-right: 5px;">
+                        <span id="language-menu">EN</span>
+                    </div>
+                    <div class="right-nav-item right-nav-menu-bar">
+                        <span class="profile-menu-first">Hello, SignIn</span>
+                        <span class="profile-menu-second">Account & Lists</span>
+                    </div>
+                    <div class="right-nav-item right-nav-menu-bar order">
+                        <span class="profile-menu-first">Returns</span>
+                        <span class="profile-menu-second">& Order</span>
+                    </div>
+                    <div class="right-nav-item cart right-nav-menu-bar"
+                        style="background-image: url('./assets/nav-sprite-global-1x-reorg-privacy._CB600086755_.png');">
+                        <span id="cart-item-counter">0</span>
+                        <span class="cart-span">Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="second-header-container">
+                <ul>
+                    <li id="side-bar-btn"
+                        style="cursor: pointer; width: 60px; display: flex; align-items: center; height: auto; justify-content: space-evenly">
+                        <img src="./assets/menu.png" style="width: 20px; height: auto;">
+                        <span>All</span>
+                    </li>
+                    <li><a href="#">Fresh</a></li>
+                    <li><a href="#">Amazon miniTV</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Best Seller</a></li>
+                    <li><a href="#">Today's Deals</a></li>
+                    <li><a href="#">Mobiles</a></li>
+                    <li><a href="#">Customer Services</a></li>
+                    <li><a href="#">Prime</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">New Releash</a></li>
+                    <li><a href="#">Home & Kitchen</a></li>
+                    <li><a href="#">Amazon Pay</a></li>
+                    <li><a href="#">Computers</a></li>
+                    <li><a href="#">Gift Ideas</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- second pannel -->
+        <div class="shopping-section">
+            <div class="shopping-cart-container">
+
+                <div class="shopping-header">
+                    <h1 class="shopping-cart-header">Shopping Cart</h1>
+                    <h3 class="">Price</h3>
+                </div>
+
+                <div class="cart-container" id="cart-container">
+                    <!-- add  cart items -->
+                    <hr>
+                </div>
+            </div>
+            <div class="cart-righ-bar">
+                <div class="cart-right-container">
+                    <div class="cart-total-item">
+                        <span>
+                            Total Items
+                        </span>
+                        <span class="total-quantity" id="total-quantity">0</span>
+                    </div>
+                    <div class="cart-total-items-price cart-total-item">
+                        <span>Total Price </span>
+                        <span id="total-price">0</span>
+                    </div>
+                    <div class="cart-total-item">
+                        <button class="cart-buy-btn">Process to Buy</button>
+                    </div>
+                    <div class="cart-total-item">
+                        <div class="select-wrapper">
+                            <select id="cart-drop-down" class="cart-drop-down" required name="select"
+                                style="width: 100%;">
+                                <option selected disabled value="" hidden>EMI Availaible</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./cart.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

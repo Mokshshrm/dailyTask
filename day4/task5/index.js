@@ -10,7 +10,7 @@ function buildComponent(url, text, index) {
                     <div>
                         <p>${text}</p>
                     </div>
-                    <a href="${url}" download="$file{index}" class="img-download-btn"> Download </a>
+                    <a href="${url}" onclick="downloadFile(event)" class="img-download-btn" download="file${index}.jpg}"> Download </a>
                 </div>
             </div>
     `
@@ -21,10 +21,10 @@ function buildComponent(url, text, index) {
 const csvFileInput = document.getElementById('img-input')
 const imgViewr = document.getElementById('img-container')
 
-csvFileInput.addEventListener('change', (event) => {
-
+csvFileInput.addEventListener('change', async (event) => {
+    event.preventDefault();
     const file = csvFileInput.files[0];
-    
+
     imgViewr.innerHTML = '';
 
     const re = /(\.csv)$/i;
@@ -33,7 +33,7 @@ csvFileInput.addEventListener('change', (event) => {
 
         let reader = new FileReader();
 
-        reader.onload = function (event) {
+        reader.onload = async function (event) {
 
             let fileData = reader.result;
             let fileRows = fileData.split('\n')
@@ -45,7 +45,6 @@ csvFileInput.addEventListener('change', (event) => {
 
                     let url = columsArr[0].trim();
                     let description = columsArr[1].trim();
-
                     imgViewr.innerHTML += buildComponent(url, description, index);
                 }
             });
@@ -60,16 +59,23 @@ csvFileInput.addEventListener('change', (event) => {
 // for downloading images
 
 
-function downloadFile(url, fileName) {
+async function downloadFile(event) {
 
+    event.preventDefault();
+    console.log("in handle function")
+    
     const download = document.createElement('a');
 
-    download.href = url;
-    download.download = fileName;
+    const img = await fetch(event.target.href);
+    const blob = URL.createObjectURL(await img.blob())
 
+    download.href = blob;
 
+    download.download = 'file.jpg';
     document.body.appendChild(download);
     download.click();
+
+    URL.revokeObjectURL(blob);
     document.body.removeChild(download);
 
     return;

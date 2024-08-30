@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./product.css">
+</head>
+
+<body>
+    <div class="main-page">
+        <div class="side-bar-container" id="side-bar-container">
+            <div class="side-bar-content">
+                <div class="side-bar-content-header">
+                    <img id="side-bar-profile" src="./assets/profile.png" alt="user-logo">
+                    <span>Hello, Sign in</span>
+                </div>
+                <div class="side-bar-content-items">
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Trending</span>
+                        <div class="side-bar-item-content">
+                            <span>Best Sellers</span>
+                            <span>New Release</span>
+                            <span>Movers and Shakers</span>
+                        </div>
+                    </div>
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Digital Content and Devices</span>
+                        <div class="side-bar-item-content">
+                            <span>Echo & Alexa</span>
+                            <span>Fire TV</span>
+                            <span>Kindle E-Readers & eBook</span>
+                            <span>Audible Audiobooks</span>
+                            <span>Amazon Prime Video</span>
+                            <span>Amazon Prime Music</span>
+                        </div>
+                    </div>
+                    <span class="side-bar-item-header">Shop by Category</span>
+                    <div class="side-bar-content-item">
+                        <div class="side-bar-item-content">
+                            <span>Mobile, Computers</span>
+                            <span>Tv,Appliances,Electronics</span>
+                            <span>Home, Kitchen, Pets</span>
+                            <span>Beauty, Health, Grocery</span>
+                            <span>Sports,Fitness,Bags,Luggage</span>
+                            <span>Toys,Baby Product, Kid's Fashion</span>
+                        </div>
+                    </div>
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Programs & Features</span>
+                        <div class="side-bar-item-content">
+                            <span>Best Sellers</span>
+                            <span>New Release</span>
+                            <span>Movers and Shakers</span>
+                        </div>
+                    </div>
+                    <div class="side-bar-content-item">
+                        <span class="side-bar-item-header">Help & Settings</span>
+                        <div class="side-bar-item-content">
+                            <span>Setting</span>
+                            <span>Help</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="side-bar-close-btn" class="side-bar-close-btn">
+                <div class="side-bar-btn-span"></div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header-container">
+                <div class="left-nav">
+                    <a href="#" class="">
+                        <div class="logo-img"></div>
+                        <span class="in-box">.in</span>
+                    </a>
+                    <a class="location-container">
+                        <div class="map-logo"></div>
+                        <div class="address-container">
+                            <div class="address" style="font-size: 0.85rem; letter-spacing: 0.5px;"> Delivering to
+                                Ahmedabad
+                                380001</div>
+                            <div class="address" style="font-weight: bolder;"> Update location</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fill-nav" id="fill-nav">
+                    <div class="search-menu-bar">All</div>
+                    <input type="text" class="search-bar" id="search-bar" placeholder="Search Amazon.in">
+                    <div class="search-icon"><img src="./assets/serarch.png"></div>
+                </div>
+                <div class="right-nav">
+                    <div class="right-nav-item flag-menu">
+                        <img src="./assets/flag.png" style="width:30px;margin-right: 5px;">
+                        <span id="language-menu">EN</span>
+                    </div>
+                    <div class="right-nav-item right-nav-menu-bar">
+                        <span class="profile-menu-first">Hello, SignIn</span>
+                        <span class="profile-menu-second">Account & Lists</span>
+                    </div>
+                    <div class="right-nav-item right-nav-menu-bar order">
+                        <span class="profile-menu-first">Returns</span>
+                        <span class="profile-menu-second">& Order</span>
+                    </div>
+                    <div class="right-nav-item cart right-nav-menu-bar"
+                        style="background-image: url('./assets/nav-sprite-global-1x-reorg-privacy._CB600086755_.png');">
+                        <span id="cart-item-counter">0</span>
+                        <span class="cart-span">Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="second-header-container">
+                <ul>
+                    <li id="side-bar-btn"
+                        style="cursor: pointer; width: 60px; display: flex; align-items: center; height: auto; justify-content: space-evenly">
+                        <img src="./assets/menu.png" style="width: 20px; height: auto;">
+                        <span>All</span>
+                    </li>
+                    <li><a href="#">Fresh</a></li>
+                    <li><a href="#">Amazon miniTV</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Best Seller</a></li>
+                    <li><a href="#">Today's Deals</a></li>
+                    <li><a href="#">Mobiles</a></li>
+                    <li><a href="#">Customer Services</a></li>
+                    <li><a href="#">Prime</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">New Releash</a></li>
+                    <li><a href="#">Home & Kitchen</a></li>
+                    <li><a href="#">Amazon Pay</a></li>
+                    <li><a href="#">Computers</a></li>
+                    <li><a href="#">Gift Ideas</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- second pannel -->
+        <div class="products-container">
+            
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51kRsmraj3L._AC_UL320_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">
+                        Noise Newly Launched 4 Wireless On-Ear Headphones with 70H Playtime, ENC,
+                        40mm Driver, Low Latency(up to 40ms), Dual Pairing, BT v5.4 (Calm Beige)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹2,499</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹5,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart1" key="1" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/61WAxDWqh3L._AC_UL480_QL65_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">Noise Buds N1 in-Ear Truly Wireless Earbuds with Chrome Finish, 40H of
+                        Playtime, Quad Mic with ENC, Ultra Low Latency(up to 40 ms), Instacharge(10 min=120 min), BT
+                        v5.3(Carbon Black)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹1,299</span>
+                        <span class="mrp-span">M.R.P. : <span class="product-price-span">₹3,499</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart2" key="2" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/61+R5rOj9+L._SL1500_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">
+                        Noise Newly Launched 4 Wireless On-Ear Headphones with 70H Playtime, ENC, 40mm Driver, Low
+                        Latency(up to 40ms), Dual Pairing, BT v5.4 (Carbon Black)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price"> ₹2,499</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span"> ₹5,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart3" key="3" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51+e7yrgPpL._SX522_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">Noise Buds VS104 Truly Wireless Earbuds with 45H of Playtime, Quad Mic with
+                        ENC, Instacharge(10 min=200 min), 13mm Driver,Low Latency, BT v5.2 (Mint Green)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price"> ₹1,299</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹3,499</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart4" key="4" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51gsWPWLTKL._AC_UL480_FMwebp_QL65_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">Noise Buds VS402 in-Ear Truly Wireless Earbuds with 50H of Playtime, Low
+                        Latency, Quad Mic with ENC, Instacharge(10 min=120 min),10mm Driver, BT v5.3, Breathing LED
+                        Lights (Neon White)
+
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price"> ₹1,499</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹3,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart5" key="5" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/411K8VvqshL._SX300_SY300_QL70_FMwebp_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">Noise Buds VS104 Truly Wireless Earbuds with 45H of Playtime, Quad Mic with
+                        ENC, Instacharge(10 min=200 min), 13mm Driver,Low Latency, BT v5.2 (Charcoal Black)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹1,299</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹3,499</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart6" key="6" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51kRsmraj3L._AC_UL320_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">
+                        Noise Newly Launched 4 Wireless On-Ear Headphones with 70H Playtime, ENC,
+                        40mm Driver, Low Latency(up to 40ms), Dual Pairing, BT v5.4 (Calm Beige)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹2,499</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹5,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart7" key="7" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51ZQTJ2HmKL._SL1500_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">Noise Airwave Bluetooth in Ear Neckband with 50H of Playtime, 3 EQ Modes,
+                        ENC for Calling, Low Latency(Upto 50ms), 10mm Driver, BT v5.3(Jet Black)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹999</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹2,499</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart8" key="8" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/61IKUYZYfrL._AC_UL480_QL65_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">Noise Pure Pods Wireless Open Ear Earbuds with AirWave™ Technology,Up-to 80H
+                        Playtime,Quad Mic with ENC,16mm Neodymium Dynamic Driver,Detachable Pure Band,BTv5.3 (Power
+                        Black)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹2,999</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹6,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart9" key="9" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51KNl2wcBYL._SL1500_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <span class="product-name">Noise Newly Launched Buds Xero Truly Wireless in-Ear Earbuds with
+                        Adaptive
+                        Hybrid ANC (Upto 50dB), in-Ear Detection, Sound+ Algorithm, 12.4MM Driver, 50H Playtime, BT
+                        v5.3(Chrome Beige)
+                    </span>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹3,999</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹6,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart10" key="10" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+                <div class="product-view">
+                    <img src="https://m.media-amazon.com/images/I/51kRsmraj3L._AC_UL320_.jpg">
+                </div>
+
+                <div class="product-description">
+
+                    <div class="product-colors">
+                        <div class="color-span color-span-1"></div>
+                        <div class="color-span color-span-2"></div>
+                        <div class="color-span color-span-3"></div>
+                        <div class="color-span color-span-4"></div>
+                        <div class="color-span color-span-5"></div>
+                    </div>
+
+                    <p class="product-name">
+                        Noise Newly Launched 4 Wireless On-Ear Headphones with 70H Playtime, ENC,
+                        40mm Driver, Low Latency(up to 40ms), Dual Pairing, BT v5.4 (Calm Beige)
+                    </p>
+                    <div class="product-rating-container">
+                        <div class="product-rating">
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                            <span class="rating-star"><img src="./assets/icons8-star-48.png"></span>
+                        </div>
+                        <div class="product-rating-numbers">
+                            <span>12000</span>
+                        </div>
+                    </div>
+                    <div class="monthly-buyers">
+                        <span class="">1K+ bought in past month</span>
+                    </div>
+                    <div class="product-price-container">
+                        <span class="product-price">₹2,499</span>
+                        <span class="mrp-span">M.R.P.<span class="product-price-span">₹5,999</span></span>
+                    </div>
+                    <div class="prime-advertise-container">
+                        <div class="prime-logo"></div>
+                        <p class="prime-advertise"> Get it by Tuesday 3 September</p>
+                    </div>
+                    <div class="prime-advertise">FREE Delivery by Amazon</div>
+                    <div id="cart11" key="11" class="cart-btn">Add To Cart</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+.products-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+.product-card {
+
+    height: auto;
+    position: relative;
+    box-shadow: 0px 0px 6px 0px black;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+}
+
+.product-view {
+    margin: auto;
+    width: 200px;
+    height: auto;
+    place-items: center;
+}
+
+.product-view>img {
+    width: 100%;
+    height: auto;
+}
+
+
+.product-description {
+    padding: 10px;
+    height: auto;
+    width: 100%;
+}
+
+
+.product-colors {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.color-span {
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border: 1px soli transparent;
+    border-radius: 20px;
+}
+
+.color-span-1 {
+    background-color: red;
+}
+
+.color-span-2 {
+    background-color: purple;
+}
+
+.color-span-3 {
+    background-color: aqua;
+}
+
+.color-span-4 {
+    background-color: black;
+}
+
+.color-span-5 {
+    background-color: pink;
+}
+
+.product-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    height: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-rating-container {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-rating-numbers {
+    font-size: 0.75rem;
+    display: grid;
+    place-items: center;
+}
+
+.product-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rating-star>img {
+    width: 20px;
+    height: 20px;
+}
+
+.monthly-buyers {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .90rem;
+    font-weight: 600;
+    color: grey;
+}
+
+.product-price {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+
+.mrp-span {
+    font-weight: bold;
+    font-size: .75rem;
+}
+
+.product-price-span {
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.prime-advertise-container {
+    height: auto;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.prime-logo {
+    width: 55px;
+    height: 17px;
+    background-image: url('./assets/ZpbG74laklgnz-i.png');
+    background-repeat: no-repeat;
+    background-position-x: -178px;
+    background-position-y: -143px;
+}
+
+.prime-advertise {
+    text-wrap: wrap;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: .70rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.cart-btn {
+    background-color: #f08804;
+    width: max-content;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+/*  card media query */
+@media screen and (min-width:768px) {
+
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+        gap: 30px;
+        margin: 30px;
+        width: auto;
+    }
+
+    .product-card {
+        width: 100%;
+        flex-grow: 1;
+        position: relative;
+        height: auto;
+        box-shadow: 0px 0px 6px 0px black;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        gap: 20px;
+    }
+
+    .product-view {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 6px 0px grey;
+        display: grid;
+    }
+
+    .product-view>img {
+        width: 80%;
+        height: 80%;
+    }
+
+
+    .product-description {
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
