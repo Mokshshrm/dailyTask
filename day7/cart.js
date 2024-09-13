@@ -41,7 +41,6 @@ let cartArray = [
         color: 'Dark Chrome',
     },
 ];
-
 const getCartCardItem = (product) => {
     return (
         `
@@ -92,6 +91,8 @@ const totalQuantityOfCart = document.getElementById('total-quantity');
 const totalPriceOfCart = document.getElementById('total-price');
 
 function injectCartItems() {
+
+    document.getElementById('cart-item-counter').innerText = cartArray.length;
 
     cartContainer.innerHTML = '';
     totalPriceOfCart.innerText = '0';
